@@ -1,0 +1,406 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    height: 100vh;
+    background-color: #4177a7;
+    font-family: 'Roboto', 'Sans-serif';
+}
+#app {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: #18A999;
+    text-align: center;
+    cursor: pointer;
+}
+.container {
+    max-width: 1440px;
+    background-color: rgb(245, 244, 244);
+    box-shadow: 0px 5px 15px 10px #37648b;
+    border-radius: 25px;
+}
+
+/*  TABLE  */
+table {
+    width: 100%;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+td, th {
+    width: 300px;
+    text-align: left;
+    padding: 10px;
+}
+thead {
+    background-color: rgba(172, 172, 172, 0.377);
+}
+tr:nth-child(2n+1){
+    background-color: rgba(172, 172, 172, 0.13);
+}
+tr:nth-child(2n){
+    background-color: rgba(219, 219, 219, 0.13);
+}
+tr:hover {
+    background-color: #5babce5e;
+}
+
+.newUser form, .search-bar {
+    display: flex;
+    flex-direction: row;
+}
+.newUser form {
+    margin-top: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+.newUser form input, .newUser form select {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.search-bar {
+    max-width: 60%;
+    padding: 10px 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px 1px rgba(189, 188, 188, 0.315);
+    background-color: white;
+    
+}
+#imie {
+    margin-left: 50px;
+    border-right: 1px solid black;
+}
+.search-bar input {
+    border: none;
+    font-weight: 500;
+    font-size: large;
+    max-width: 100px;
+}
+.search-bar .reset-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: rgb(211, 60, 60);
+    font-size: x-large;
+    background-color: white;
+}
+/* add user */
+.newUser {
+    max-width: 80%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.new-user-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    height: 58px;
+}
+.newUser form {
+    width: 100%;
+}
+.newUser form input {
+    display: block;
+    max-width: 200px;
+    
+}
+.newUser form label {
+    display: block;
+    max-width: 200px;
+}
+.input-wrapper {
+    margin: 0 5px;
+    
+}
+.add-btn {
+    padding: 12px 10px;
+    align-self: end;
+    background-color: rgb(35, 167, 255);
+    margin-left: 10px;
+    font-weight: 600;
+}
+.close-input-btn {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    color: red;
+    font-size: medium;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: white;
+}
+.hiddenInput {
+    display: inline-block;
+    position: relative;
+}
+.toggle-add {
+    margin-left: 50px;
+    padding: 15px 10px;
+    font-weight: 800;
+}
+/* checkbox query for department */
+.checks-ctn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 80px;
+    justify-content: space-between;
+}
+
+.checkbox-wrapper {
+    width: fit-content;
+    padding: 0 20px;
+}
+input[type='checkbox'] {
+    margin-right: 5px;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+i {
+    transition: all 0.5s ease;
+}
+.query-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: 10px;
+}
+.dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+span i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: x-large;
+    transform: translateY(-50%);
+    color: rgb(70, 70, 70);
+}
+.dep-ctn {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.541);
+    font-weight: 500;
+}
+#min {
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+@media screen and (max-width: 1600px) {
+    .container {
+        max-width: 1100px;
+    }
+    .newUser form input {
+        width: 150px;
+    }
+    .search-bar {
+        max-width: 80%;
+    }
+    .newUser {
+        margin: 0 0 0 10px;
+    }
+    .toggle-add {
+        margin-left: 30px;
+    }
+    #min {
+        width: 100px;
+        border-left: 1px solid black;
+        padding-left: 20px;      
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+    .input-wrapper {
+        display: inline-block;
+        width: 100px;
+        margin-right: 25px;
+    }
+    .newUser form input {
+        width: 100px;
+    }
+    .newUser form select {
+        width: 100px;
+    }
+    .search-bar {
+        max-width: 80%;
+    }
+    #min {
+        width: 90px;
+        border-left: 1px solid black;
+        padding-left: 10px;      
+    }
+}
+@media screen and (max-width: 1050px) {
+    .container {
+        max-width: 750px;
+        margin-bottom: 50px;
+    }
+    .new-user-wrapper {
+        height: auto;
+    }
+    .newUser {
+        width: 100%;
+    }
+    .newUser form input {
+        width: 600px;
+        max-width: none;
+    }
+    .newUser form select {
+        width: 600px;
+    }
+    .new-user-wrapper, .newUser form {
+        flex-direction: column;
+    }
+    .toggle-add {
+        margin-left: 0;
+    }
+    .input-wrapper {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .add-btn {
+        align-self: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .dep-ctn { 
+        position: relative;
+        margin-right: 50px;
+    }
+    .query-btn {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%);
+    }
+    .min-salary-input {
+        padding-left: 20px;
+        margin-left: 0;
+    }
+    #min {
+        width: 90px;
+        border-left: 1px solid black;
+        padding-left: 10px;      
+    }
+
+}
+@media screen and (max-width: 880px) {
+    .container {
+        max-width: 550px;
+        margin-bottom: 50px;
+    }
+    table {
+        padding: 0;
+        margin-top: 60px;
+    }
+    th,td {
+        max-width: 50px;
+        width: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .truncate {
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .newUser form input {
+        width: 400px;
+        max-width: none;
+    }
+    .newUser form select {
+        width: 400px;
+    }
+    .search-bar {
+        max-width: 90%;
+    }
+    #imie {
+        text-align: center;
+        width: 60px;
+        margin-left: 45px;
+    }
+    #min {
+        width: 90px;
+        border-left: 1px solid black;
+        padding-left: 10px;      
+    }
+    .reset-btn {
+        position: absolute;
+        right: 0;
+    }
+    .search-bar input {
+        margin-right: 15px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 527px) {
+    .container{
+        min-width: 525px;
+    }
+    .newUser form input {
+        width: 400px;
+        max-width: none;
+    }
+    .newUser form select {
+        width: 400px;
+    }
+    .search-bar {
+        max-width: 90%;
+    }
+    #imie {
+        text-align: center;
+        width: 60px;
+        margin-left: 45px;
+    }
+    .min-salary-input{
+        margin-right: 0;
+        width: 80px;
+        padding-left: 0;
+        max-width: 80px;
+    }
+    .checks-ctn .max-salary-input {
+        margin: 0;
+        margin-right: 40px;
+        width: 80px;
+        
+    }
+    .reset-btn {
+        position: absolute;
+        right: 0;
+    }
+    .search-bar input {
+        margin-right: 15px;
+        margin-left: 10px;
+    }
+}
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
