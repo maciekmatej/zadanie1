@@ -1,8 +1,7 @@
 # task
 
-Zadanie rekrutacyje wykonałem w Vue js.
-Apka jest dostepna live pod adresem: 
-Repozytorium jest ustawione jako prywatne.
+This is an app with an interactive table made with Vue JS. 
+live preview: http://maciekmatej.github.io/zadanie-rekrutacyjne/
 
 ## Project setup
 ```

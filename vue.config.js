@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/zadanie-rekrutacyjne/',
+  publicPath: '/zadanie1/',
 };
