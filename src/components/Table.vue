@@ -65,14 +65,11 @@ export default {
     },
     totalDepartment() { // this function counts total salary for current query
       let totalDep = 0;
-      let type = this.filteredData[0].wynagrodzenieWaluta;
+
       this.filteredData.forEach((pracownik) => {
         totalDep += parseFloat(pracownik.wynagrodzenieKwota);
-        if (pracownik.wynagrodzenieWaluta !== type) {
-          type = 'mixed';
-        }
       });
-      return `${totalDep} ${type}`;
+      return totalDep;
     },
   },
 };
