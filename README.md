@@ -1,7 +1,7 @@
 # task
 
 This is an app with an interactive table made with Vue JS. 
-live preview: http://maciekmatej.github.io/zadanie-rekrutacyjne/
+live preview: http://maciekmatej.github.io/zadanie1/
 
 ## Project setup
 ```

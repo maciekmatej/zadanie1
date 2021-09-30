@@ -2,12 +2,19 @@
     <table>
       <thead>
         <tr>
-          <th v-for="col in cols" :key="col" :alt="col">{{ col }}</th>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+          <th>dział</th>
+          <th>wynagrodzenie</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="row in filteredData" :key="row">
-          <td v-for="data in row" :key="data">{{ data }}</td>
+          <!-- <td v-for="data in row" :key="data">{{ data }}</td> -->
+          <td >{{ row.imie }}</td>
+          <td >{{ row.nazwisko }}</td>
+          <td >{{ row.dzial }}</td>
+          <td >{{ `${row.wynagrodzenieKwota} ${row.wynagrodzenieWaluta}` }}</td>
         </tr>
         <br/>
         <br/>
@@ -32,32 +39,40 @@ export default {
   methods: {
     totalForEachDep(dep) {
       let salary = 0;
+      let type = this.PRACOWNICY[0].wynagrodzenieWaluta;
       this.PRACOWNICY.forEach((pracownik) => {
         if (pracownik.dzial === dep) {
           salary += parseFloat(pracownik.wynagrodzenieKwota);
+          if (pracownik.wynagrodzenieWaluta !== type) {
+            type = 'mixed';
+          }
         }
       });
-      return salary;
+      return `${salary} ${type}`;
     },
   },
   computed: {
-    cols() { // builds table heads off of data
-      const cols = Object.keys(this.PRACOWNICY[0]);
-      return cols;
-    },
     total() {
       let total = 0;
+      let type = this.PRACOWNICY[0].wynagrodzenieWaluta;
       this.PRACOWNICY.forEach((pracownik) => {
         total += parseFloat(pracownik.wynagrodzenieKwota);
+        if (pracownik.wynagrodzenieWaluta !== type) {
+          type = 'mixed';
+        }
       });
-      return total;
+      return `${total} ${type}`;
     },
     totalDepartment() { // this function counts total salary for current query
       let totalDep = 0;
+      let type = this.filteredData[0].wynagrodzenieWaluta;
       this.filteredData.forEach((pracownik) => {
         totalDep += parseFloat(pracownik.wynagrodzenieKwota);
+        if (pracownik.wynagrodzenieWaluta !== type) {
+          type = 'mixed';
+        }
       });
-      return totalDep;
+      return `${totalDep} ${type}`;
     },
   },
 };
